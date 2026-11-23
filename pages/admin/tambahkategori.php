@@ -52,7 +52,6 @@ include '../../config/koneksi.php';
 if(isset($_POST['simpan'])){
     $nama_kategori = $_POST['nama_kategori'];
     $created_at = date("Y-m-d H:i:s");
-
     $query = "INSERT INTO kategori (nama_kategori, created_at) VALUES ('$nama_kategori', '$created_at')";
     if(mysqli_query($conn, $query)) {
         header("Location: kategori.php");
